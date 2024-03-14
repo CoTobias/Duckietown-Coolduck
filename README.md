@@ -12,7 +12,7 @@ To run Analysis:
 	dts devel run -R duckiebotname' -L trajectory
 4 See published Messages: 
 	dts devel run -H duckiebotname' -L my-subscriber
-
+--------------------------------------------------------------------------------
 To run Mobile iOS:
 # Mobile ROS
 
@@ -44,7 +44,7 @@ Please make sure to update tests as appropriate.
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
+--------------------------------------------------------------------------------
 To run Lane following:
 change the name of the bot in default.sh in launcher
 dts devel build -f
