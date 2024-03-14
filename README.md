@@ -13,26 +13,40 @@ To run Analysis:
 4 See published Messages: 
 	dts devel run -H duckiebotname' -L my-subscriber
 --------------------------------------------------------------------------------
-To run Mobile iOS:
 # Mobile ROS
 
-Mobile ROS is a iOS application for dealing with word pluralization.
+Mobile ROS is a iOS application for communication of iOS devices and ROS robots.
 
 ## Installation
 
-Use the package manager [npm](https://www.npmjs.com) to install Mobile ROS, make sure you are under root path of the project.
+Use the package manager [npm](https://www.npmjs.com) to install dependencies of Mobile ROS, make sure you are under root path of the project.
 
 bash
 npm install
 
 
-## Usage
+## Usage - Server side
+You need to install [ROS bridge](http://wiki.ros.org/rosbridge_suite/Tutorials/RunningRosbridge#Installing_Rosbridge) on the robot to establish connections by executing
 
 bash
-#to start the app
+sudo apt-get install ros-<rosdistro>-rosbridge-suite
+
+After the installation, source the setup bash file by following
+
+bash
+source /opt/ros/<rosdistro>/setup.bash
+
+you need to launch rosbridge every time to use
+
+bash
+roslaunch rosbridge_server rosbridge_websocket.launch
+
+## Usage - Client side
+to build and start the app
+bash
 npx expo start
 
-and then press i/a/w to launch iOS/Android/web version of the application
+ then press i/a/w to launch iOS/Android/web version of the application, you may install expo go if you want to use it on iOS
 
 ## Contributing
 
